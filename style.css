@@ -1,0 +1,771 @@
+/*  import google fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.max-width
+{
+    max-width: 1300px;
+    padding: 0px 80px;
+    margin: auto;
+}
+
+/* NAVBAR STYLING */
+
+.navbar
+{
+    position: fixed;
+    width: 100%;
+    padding: 30px 0;
+    /* background-color: crimson; */
+    font-family: 'Ubuntu' , sans-serif;
+    transition: all 0.3s ease;
+    z-index: 999;
+
+
+}
+.navbar.sticky{
+    padding: 15px 0;
+    background-color: crimson;
+}
+
+.navbar .max-width
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.navbar .logo a
+{
+    color: #fff;
+    font-size: 32px;
+    font-weight: 600;
+}
+.logo1{
+    position: fixed;
+    height: 9vh;
+    width: 5vw;
+    left: 1vw;
+    top: 0.7vh;
+}
+.navbar .logo a span{
+color: crimson;
+transition: all 0.3s ease;
+
+}
+.navbar.sticky .logo a span{
+    color: #fff;
+
+}
+/* .navbar .menu{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    background-color: #111;
+    text-align: center;
+    padding-top: 80px;
+} */
+
+.navbar .menu li
+{
+
+    list-style: none;
+    display: inline-block;
+
+}
+.navbar .menu li a
+{
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight:500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover
+{
+    color: crimson;
+    }
+.navbar.sticky .menu li a:hover{
+    color: #fff;
+
+}
+
+
+/*-------------------------MENU BTN STYLING---------------------------------*/
+
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    display: none;
+    cursor: pointer;
+
+}
+.scroll-up-btn{
+position: fixed;
+height: 45px;
+width: 42px;
+background:crimson ;
+right: 30px;
+bottom: 30px;
+text-align: center;
+line-height: 45px;
+color: #fff;
+z-index: 9999;
+font-size: 30px;
+border-radius: 6px;
+cursor: pointer;
+opacity: 0;
+pointer-events: none;
+transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+
+}
+/*-------------------------HOME SECTON---------------------------------*/
+
+.home{
+    display: flex;
+    background: url("bgm.jpg") no-repeat center;
+    background-size: 100% 100%;
+    height: 100vh;
+    color: white;
+    min-height: 500px;
+    font-family: 'Ubuntu' , sans-serif;
+
+}
+.home .max-width{
+    margin: auto 0 auto 30px;
+}
+.home .text-1{
+    font-size: 27px;
+}
+
+
+
+.home .text-2{
+font-size : 75px ;
+font-weight : 600 ;
+margin-left: -3px ;
+
+}
+.home .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+    margin-left: -2px;
+}
+.home .text-3 span{
+    color: crimson;
+    font-weight: 500;
+}
+.home a{
+    display: inline-block;
+    background-color: crimson;
+    color: white;
+    font-size: 22px;
+    padding:12px 36px ;
+    margin-top:20px ;
+    border-radius:6px ;
+    border: 2px solid crimson ;
+    transition: all 0.3s ease;
+}
+.home a:hover{
+    color: crimson;
+    background: none;
+
+}
+
+/*-------------------------ABOUT SECTON---------------------------------*/
+
+
+.about{
+    font-family: 'poppins' , sans-serif;
+
+}
+
+.about .title::after{
+    content:"who i am";
+}
+
+.about .about-content .left{
+    width: 45%;
+}
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.about .about-content .right{
+    width: 55%;
+}
+.about .about-content .right .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about .about-content .right .text span{
+    color: crimson;
+}
+.about .about-content .right .text p{
+    text-align: justify;
+    
+    }
+.about .about-content .right a{
+    display: inline-block;
+    background-color: crimson;
+    color: white;
+    font-size: 19px;
+    padding:10px 30px ;
+    margin-top:20px ;
+    border-radius:6px ;
+    border: 2px solid crimson ;
+    transition: all 0.3s ease;
+    font-weight: 501;
+}
+.about .about-content .right a:hover{
+            color: crimson;
+            background: none;
+}
+.about .about-content .column{
+    width: 50%;
+}
+
+/*-------------------------ALL SIMILAR STYLING SECTON CODE---------------------------------*/
+section{
+    padding: 100px 0;
+}
+.about , .service , .skills , .teams ,.contact , footer{
+    font-family: 'Poppins', sans-serif;
+}
+.about .about-content ,
+.service .serv-content ,
+.skills .skills-content ,
+.teams .teams-content ,
+.contact .contact-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+} 
+section .title{
+    position: relative;
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu' , sans-serif;
+
+}
+section .title::before{
+    content:"";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform:translateX(-50%) ;
+
+}
+section .title::after{
+    position: absolute;
+    bottom: -12px;
+    font-size: 20px;
+    color: crimson;
+    font-weight: 600;
+    left: 50%;
+    padding: 5px;
+    background:white;
+    transform:translateX(-50%) ;
+
+}
+
+/*-------------------------SERVICE SECTON---------------------------------*/
+.service .title::after , 
+.teams .title::after{
+    background: #111;
+    content: "what we provide"; 
+}
+.service , .teams{
+    color: #fff;
+    background: #111;
+
+}
+.service .title::before ,
+.teams .title::before {
+    background: #fff;
+}
+.service .serv-content .card{
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+}
+.service .serv-content .card i{
+    font-size: 50px;
+    color: crimson;
+}
+.service .serv-content .card:hover i{
+    color: #fff;
+}
+.service .serv-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+
+}
+.service .serv-content .card .box{
+    transition: all 0.3s ease;
+}
+.service .serv-content .card:hover .box{
+        transform: scale(1.05);
+            
+}
+.service .serv-content .card:hover {
+    background-color: crimson;
+}
+/* -------------------------------------------skills Styling--------------------------------- */
+
+.skills .title::after{
+    content: "what i know";
+}
+.skills .skills-content .column{
+    width: calc(50% - 30px);
+}
+
+.skills .skills-content .left .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.skills .skills-content .right .bars{
+    
+    margin-bottom: 15px;
+    
+    
+}
+.skills .skills-content .right .info{
+
+    display:flex ;
+    margin-bottom: 5px;
+        align-items: center;
+    justify-content: space-between;
+}
+.skills .skills-content .right span{
+    
+    font-size: 18px;
+    font-weight: 600;
+    
+}
+.skills .skills-content .right .line{
+    height: 5px;
+    width:100% ;
+    background: lightgrey;
+    position: relative;
+}
+.skills .skills-content .right .line::before{
+    content: "";
+    position: absolute;
+    height: 100% ;
+    background: crimson;
+    top: 0;
+    left: 0;
+}
+.skills .skills-content .right p{
+        text-align: justify;
+    }
+    .skills .skills-content .left a{
+        display: inline-block;
+        background-color: crimson;
+        color: white;
+        font-size: 17px;
+        padding:8px 16px ;
+        margin-top:20px ;
+        border-radius:6px ;
+        border: 2px solid crimson ;
+        transition: all 0.3s ease;
+        font-weight: 501;
+    }
+    .skills .skills-content .left a:hover{
+        color: crimson;
+        background: none;
+}
+.skills .skills-content .right .html::before{
+    width: 90%;
+}
+.skills .skills-content .right .css::before{
+    width: 50%;
+}
+.skills .skills-content .right .js::before{
+    width: 65%;
+}
+.skills .skills-content .right .php::before{
+    width: 10%;
+}
+.skills .skills-content .right .seo::before{
+    width: 75%;
+}
+/*-------------------------TEAMS SECTION Start---------------------------------*/
+.teams .title::after{
+    content: " Who with Me";
+} 
+.teams .carousel .card{
+    background: #222;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+
+    
+}
+ .teams .carousel .card{
+    
+  font-size: 15px;
+   font-weight: 300;
+    margin: 10px 0 7px 0;
+    transition: all 0.3s ease;
+    }
+    .teams .carousel .card:hover{
+        background: crimson;
+    }
+.teams .carousel .card .box{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+.teams .carousel .card:hover .box{
+    transform: scale(1.05);
+}
+
+.teams .carousel .card img{
+    height: 150px ;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid crimson;
+    transition: all 0.3s ease;
+    
+}
+.teams .carousel .card:hover img{
+    border-color: #fff ;
+}
+
+
+/* --------------------------------------CONTACT FORM-------------------------------------------------- */
+
+.contact .title::after{
+    content: "get in touch";
+}
+.contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+.contact .contact-content .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact .contact-content .left p{
+    text-align: justify;
+}
+
+.contact .contact-content .left .icons{
+    margin: 10px 0px;
+}
+.contact .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contact .contact-content .row .info
+{
+    margin-left: 30px;
+}
+
+.contact .contact-content .row  i{
+    font-size: 25px;
+    color: crimson;
+}
+
+.contact .contact-content .info .head{
+    font-weight: 600;
+}
+.contact .contact-content  .info .sub-title{
+    color: #333;
+}
+.contact .right form .fields{
+    display: flex;
+
+}
+ 
+.contact .right form .field,
+.contact .right form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+
+}
+.contact .right form .textarea{
+    height: 80px;
+}
+.contact .right form .name {
+    margin-right: 10px;
+}
+.contact .right form .email {
+    margin-left:10px ;
+}
+.contact .right form .field input ,
+.contact .right form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border:1px solid lightgray ;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-family: 'popins' ,sans-serif;
+}
+.contact .right form .textarea textarea{
+    padding-top: 10px;
+    resize: none;
+}
+.contact .right form .button button{
+    height: 100%;
+    width: 100%;
+    border: 2px solid crimson;
+    background:crimson;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.contact .right form .button button:hover{
+    color: crimson;
+    background: none;
+}
+
+.contact .right form .button{
+    height: 47px;
+    width: 170px;
+}
+
+/* --------------------------------foter section styling---------------------------------------------- */
+
+footer{
+    background: #111;
+    padding: 20px 23px;
+    color: #fff;
+}
+footer span a{
+    color: crimson;
+    text-decoration: none;
+
+}
+footer span a:hover{
+    text-decoration: underline;
+}
+
+       
+/*-------------------------Responsive Media Query Start---------------------------------*/
+
+@media (max-width:1300px ){
+    .home .max-width{
+        margin-left:0px ;
+    }
+}
+@media (max-width:1104px ){
+    .about .about-content .left img{
+        height:350px ;
+        width:350px ;
+    }
+}
+@media (max-width:991px ){
+    .max-width
+    {
+        padding: 0px 50px;
+    }
+}
+@media (max-width:993px ){
+    .logo1{
+        display: none;
+        }
+        
+
+}
+
+@media (max-width:947px ){
+    
+.menu-btn{
+    color: #fff;
+    display: block;
+    z-index: 999;
+    cursor: pointer;
+
+}
+.menu-btn i.active:before{
+    content: "\f00d";
+}
+.navbar .menu{
+    position: fixed;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    text-align: center;
+    padding-top:80px ;
+    transition: all 0.3s ease;
+}
+.navbar .menu.active{
+    left:0;
+}
+.navbar .menu li{
+    display: block;
+}
+
+.navbar .menu li a{
+    display: inline-block;
+    margin: 20px 0px;
+    font-size:25px; 
+}
+.logo1{
+    /* display: none; */
+    left: 0.5vw;
+}
+.home .text-2{
+    font-size: 70px;
+}
+.home .text-3{
+    font-size: 35px;
+}
+.home a{
+    font-size: 23px;
+    padding: 10px 30px;
+}
+.logo1{
+display: none;
+}
+.max-width{
+    max-width: 800px;
+}
+.about .about-content .column{
+    width: 100%;
+}
+.about .about-content .left{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 60px;
+}
+.about .about-content .right
+{
+    flex: 100%;
+}
+.service .serv-content .card{
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+}
+.skills .skills-content .column,
+.contact .contact-content .column{
+
+    width: 100%;
+    margin-bottom: 35px;
+}
+}
+@media (max-width:690px ){
+    .max-width
+    {
+        padding: 0px 23px;
+    }
+    .home .text-2{
+        font-size: 60px;
+    }
+    .home .text-3{
+        font-size: 32px;
+    }
+    .home a{
+        font-size: 20px;
+    }
+    
+.logo1{
+    display: none;
+    }
+    
+.service .serv-content .card{
+    width: 100%;
+}
+}
+@media (max-width:520px ){
+    /* .max-width
+    {
+        padding: 0px 23px;
+    } */
+    .home .text-2{
+        font-size: 50px;
+    }
+    .home .text-3{
+        font-size: 27px;
+    }
+    
+.logo1{
+    display: none;
+    }
+}
+
+@media (max-width:440px ){
+    /* .max-width
+    {
+        padding: 0px 23px;
+    } */
+    .home .text-2{
+        font-size: 40px;
+    }
+    .home .text-3{
+        font-size: 20px;
+    }
+    
+.logo1{
+    display: none;
+    }
+}
+
+@media (max-width:415px ){
+    .max-width
+    {
+        padding: 0px 13px;
+    }
+    .home .text-2{
+        font-size: 30px;
+    }
+    .home .text-3{
+        font-size: 15px;
+    }
+    
+.logo1{
+    display: none;
+    }
+}
+
+
+
+
+
